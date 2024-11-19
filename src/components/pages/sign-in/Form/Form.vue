@@ -44,7 +44,7 @@ async function signIn() {
   const redirectUrl = await accountStore.signIn({
     clientRedirectUrl: window.location.origin,
   })
-
+  
   window.location.href = redirectUrl
 }
 </script>

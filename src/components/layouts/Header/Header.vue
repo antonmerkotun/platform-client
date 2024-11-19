@@ -18,9 +18,9 @@
             accountStore.account?.picture ||
             'src/assets/icons/account-avatar.svg'
           "
+          loading="lazy"
           alt="avatar"
           @click="toggleMenu"
-          ref="profileImage"
           class="h-8 w-8 cursor-pointer rounded"
         />
 
@@ -61,7 +61,6 @@ const route = useRoute();
 
 const isSignInPage = computed(() => route.name === 'sign-in');
 const showMenu = ref(false);
-const profileImage = ref<HTMLElement | null>();
 
 function toggleMenu() {
   showMenu.value = !showMenu.value;
